@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center 
+                align-items-center">            
+        <div class="col-md-8">
+          {% include('messages.html') %}
+            <h1 class="text-center text-primary">              
+              Добро пожаловать!
+            </h1>            
+            <p class="text-center text-success">
+              Это WEB-приложение, которое по заданным пользователем категориям, мониторит (парсит) сайт Дром. 
+              Результат парсинга - объявления можно посмотреть на странице сайте.
+            </p>
+            <p class="text-center text-success">Мы помогаем, Вы успеваете!</p>           
+          </div>
+    </div>
+</div>
+{% endblock %}

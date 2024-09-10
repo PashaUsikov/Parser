@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+<br>
+<br>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-4">{% include('messages.html') %}</div>
+    <div class="col-4 text-center">
+      <h3>Данные пользователя</h3>
+        <form action="" method="post" novalidate>
+          {{ form.hidden_tag() }}
+          <div class="form-group">
+            {{ form.username.label }}<br>
+            {{ form.username(size=32) }}<br>
+            {% for error in form.username.errors %}
+              <span style="color: red;">Ошибка: [{{ error }}]</span>
+            {% endfor %}
+          </div>
+          <div class="form-group">
+            {{ form.password.label }}<br>
+            {{ form.password(size=32) }}<br>
+            {% for error in form.password.errors %}
+              <span style="color: red;">Ошибка: [{{ error }}]</span>
+            {% endfor %}
+          </div>
+          <div class="form-group">
+          {{ form.remember_me() }} {{ form.remember_me.label }}
+          </div>
+          <br>
+          {{ form.submit() }}
+        </form>
+      </div>
+      <div class="col-4"></div>
+    </div>
+  </div>
+{% endblock %}

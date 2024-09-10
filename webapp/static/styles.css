@@ -1,0 +1,27 @@
+.navbar{
+    background:#68b2e7;
+   }
+   .nav-link , .navbar-brand{
+    color: #f4f4f4;
+    cursor: pointer;
+   }
+   .nav-link{
+    margin-right: 1em !important;
+   }
+   .nav-link:hover{
+    background: #f4f4f4ca;
+    color: #16bbca;
+   }
+   .navbar-collapse{
+    justify-content: flex-end;
+   }
+   .navbar-toggler{
+     background:#fff !important;
+   }
+   .bottom-side{
+    height: 50px;
+    margin-top: -50px;
+   }
+   a, u {
+    text-decoration: none;
+  }

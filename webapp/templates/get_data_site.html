@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<br>
+<br>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-6 text-center">
+        <h3>Парсинг сайта Drom</h3>
+        {% if current_user.id == request_for_parser.user_id %}
+        <h5>Результат для категории {{ request_for_parser.url_to_the_category }}</h5>
+          {% for data in result_parsing %}
+            <h4><a href="{{ data.url }}">{{ data.name }}</a></h4>
+            <h5>{{ data.description }}</h5>
+            <h6>{{ data.price }}</h6>
+            <h6>Дата публикации: {{ data.published.strftime('%d.%m.%Y %H:%m') }}</h6>
+            <hr />
+          {% endfor %}
+        {% endif %}
+          <br>
+      </div>
+    <div class="col-3"></div>
+</div>
+</div>
+{% endblock %}
